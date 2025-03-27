@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Logo from '../../public/logo.svg'
 
 interface CarouselItem {
   id: number;
@@ -131,13 +132,12 @@ const HeroSection = ({
       </div>
 
       {/* Logo */}
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20">
-        <div className="relative w-48 h-16 md:w-64 md:h-20">
+      <div className="fixed top-0 px-10 py-4 bg-black bg-opacity-70 justify-between shadow-lg backdrop-blur-md z-50 w-full flex flex-row">
           {/* Placeholder for logo - in a real implementation, you would use the actual logo */}
-          <div className="w-full h-full flex items-center justify-center bg-black/70 rounded-lg">
-            <span className="text-white text-2xl font-bold">CHAVEIRO SUL</span>
+          <div>
+            <Image src={Logo} width={1000} height={1000} className="w-2/6" alt="Logo Chaveiro Sul" />
+
           </div>
-        </div>
       </div>
 
       {/* Call to Action */}
