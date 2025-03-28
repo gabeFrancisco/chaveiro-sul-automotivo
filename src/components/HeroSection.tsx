@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Logo from '../../public/logo.svg'
+import LogoSmall from '../../public/logo-small.png'
 
 interface CarouselItem {
   id: number;
@@ -109,16 +110,19 @@ const HeroSection = ({
       </div>
 
       {/* Logo */}
-      <div className="fixed top-0 px-10 py-4 bg-black bg-opacity-70 justify-between shadow-lg backdrop-blur-md z-50 w-full flex flex-row">
+      <div className="fixed top-0 px-8 md:px-10 py-4 bg-black bg-opacity-70 justify-between shadow-lg backdrop-blur-md z-50 w-full flex flex-row">
         {/* Placeholder for logo - in a real implementation, you would use the actual logo */}
         <div>
-          <Image src={Logo} width={1000} height={1000} className="w-2/6" alt="Logo Chaveiro Sul" />
+          <Image src={Logo} width={1000} height={1000} className="hidden md:block md:w-2/6" alt="Logo Chaveiro Sul" />
+        </div>
+        <div>
+          <Image src={LogoSmall} width={1000} height={1000} className="block w-4/6 md:hidden" alt="Logo Chaveiro Sul" />
         </div>
         <ul className="flex flex-row justify-center items-center">
-          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">Início</a></li>
-          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">História</a></li>
-          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">Serviços</a></li>
-          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">Contato</a></li>
+          <li className="text-sm mx-2 hover:text-gray-400 transition-all"><a href="#">Início</a></li>
+          <li className="text-sm mx-2 hover:text-gray-400 transition-all"><a href="#">História</a></li>
+          <li className="text-sm mx-2 hover:text-gray-400 transition-all"><a href="#">Serviços</a></li>
+          <li className="text-sm mx-2 hover:text-gray-400 transition-all"><a href="#">Contato</a></li>
         </ul>
       </div>
 
