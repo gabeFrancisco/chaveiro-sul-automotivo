@@ -80,14 +80,14 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <TestimonialsSection
-        title="What Our Clients Say"
-        subtitle="Real stories from satisfied customers"
+        title="O que nossos clientes estão dizendo..."
+        subtitle="História reais de nossos clientes satisfeitos!"
         testimonials={[
           {
             id: 1,
             name: "Carlos Silva",
             rating: 5,
-            text: "Chaveiro Sul saved me when I was locked out of my BMW at 2 AM. They arrived within 20 minutes and had me back in my car without any damage. Exceptional service!",
+            text: "",
             beforeImage:
               "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&q=80",
             afterImage:
@@ -97,7 +97,7 @@ export default function Home() {
             id: 2,
             name: "Ana Ferreira",
             rating: 5,
-            text: "I needed a replacement key for my Mercedes and Chaveiro Sul provided a perfect solution at half the dealer's price. The new key works flawlessly!",
+            text: "",
             beforeImage:
               "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=500&q=80",
             afterImage:
@@ -107,7 +107,7 @@ export default function Home() {
             id: 3,
             name: "Roberto Mendes",
             rating: 4,
-            text: "Professional key programming service for my Audi. They were knowledgeable, efficient, and much more affordable than the dealership.",
+            text: "",
             beforeImage:
               "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500&q=80",
             afterImage:
