@@ -18,7 +18,7 @@ const EmergencyContact = ({
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 bg-red-600 text-white rounded-lg shadow-lg p-4 flex flex-col items-center animate-pulse hover:animate-none transition-all duration-300 hover:scale-105">
+    <div className="fixed bottom-6 right-6 z-50 bg-white text-gray-700 rounded-lg shadow-lg p-4 flex flex-col items-center hover:animate-none transition-all duration-300 hover:scale-105">
       <div className="flex items-center gap-2 mb-1">
         <Phone className="h-5 w-5" />
         <span className="font-bold">{label}</span>

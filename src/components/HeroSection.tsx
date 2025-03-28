@@ -3,7 +3,11 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import Logo from '../../public/logo.svg'
+import Bg from '../../public/bg.jpg';
+import Mb from '../../public/mb.jpg'
+import Scanner from '../../public/scanner.jpg'
 
 interface CarouselItem {
   id: number;
@@ -24,29 +28,27 @@ const HeroSection = ({
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80",
-      alt: "Luxury sports car",
-      title: "Professional Key Replacement",
-      subtitle: "For all luxury and standard vehicles",
+        Mb.src,
+      alt: "Carro de luxo",
+      title: "Chaves inteligentes",
+      subtitle: "Para todos os tipos de veículos",
     },
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=1200&q=80",
+        Bg.src,
       alt: "Modern car keys",
-      title: "Advanced Key Programming",
-      subtitle: "State-of-the-art technology for modern vehicles",
+      title: "Serviços de Chaveiro em Geral",
+      subtitle: "Diversos serviços de chaveiro para sua casa e seu negócio em qualquer lugar",
     },
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&q=80",
+      image: Scanner.src,
       alt: "Emergency lockout service",
-      title: "24/7 Emergency Services",
-      subtitle: "We're there when you need us most",
+      title: "Serviços e Reparos em veículos",
+      subtitle: "Reparo de fechaduras, alarmes e centrais eletrônicas",
     },
   ],
-  logoSrc = "/chaveiro-sul-logo.png",
   autoRotateInterval = 5000,
 }: HeroSectionProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -133,11 +135,15 @@ const HeroSection = ({
 
       {/* Logo */}
       <div className="fixed top-0 px-10 py-4 bg-black bg-opacity-70 justify-between shadow-lg backdrop-blur-md z-50 w-full flex flex-row">
-          {/* Placeholder for logo - in a real implementation, you would use the actual logo */}
-          <div>
-            <Image src={Logo} width={1000} height={1000} className="w-2/6" alt="Logo Chaveiro Sul" />
-
-          </div>
+        {/* Placeholder for logo - in a real implementation, you would use the actual logo */}
+        <div>
+          <Image src={Logo} width={1000} height={1000} className="w-2/6" alt="Logo Chaveiro Sul" />
+        </div>
+        <div>
+          <ul>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
       </div>
 
       {/* Call to Action */}

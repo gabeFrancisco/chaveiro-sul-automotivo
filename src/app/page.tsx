@@ -122,10 +122,10 @@ export default function Home() {
       />
 
       {/* Fixed Position Emergency Contact */}
-      <EmergencyContact
+      {/* <EmergencyContact
         phoneNumber="+55 (51) 9999-9999"
         label="24/7 Emergency"
-      />
+      /> */}
 
       {/* Scroll to Top Button */}
       <ScrollToTopButton />
