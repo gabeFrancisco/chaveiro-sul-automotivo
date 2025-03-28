@@ -115,12 +115,12 @@ export default function Home() {
 
       {/* Contact Section */}
       <ContactSection
-        title="Contact Us"
-        subtitle="Have questions or need emergency locksmith services? Reach out to us today."
+        title="Entre em contato"
+        subtitle="Agilize seu atendimento preenchendo o formulário ou entrando em contato atraveś do WhatsApp"
         contactInfo={{
-          phone: "+55 (51) 9999-9999",
-          email: "contato@chaveirosul.com.br",
-          address: "Porto Alegre, RS, Brazil",
+          phone: "(51) 984184141 (WhatsApp)",
+          email: "chaveirosul@hotmail.com",
+          address: "Av. Farrapos, 1549 (esquina Câncio Gomes), Floresta, Porto Alegre",
         }}
       />
 

@@ -45,13 +45,13 @@ const ContactSection = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="w-full">
-            <Card className="bg-zinc-900 border-zinc-800">
+            <Card className="bg-zinc-900 text-gray-200 border-zinc-800">
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder="Nome"
                       className="bg-zinc-800 border-zinc-700"
                       required
                     />
@@ -59,7 +59,7 @@ const ContactSection = ({
                   <div>
                     <Input
                       type="email"
-                      placeholder="Your Email"
+                      placeholder="Email"
                       className="bg-zinc-800 border-zinc-700"
                       required
                     />
@@ -67,23 +67,23 @@ const ContactSection = ({
                   <div>
                     <Input
                       type="tel"
-                      placeholder="Your Phone"
+                      placeholder="Celular"
                       className="bg-zinc-800 border-zinc-700"
                       required
                     />
                   </div>
                   <div>
                     <Textarea
-                      placeholder="Your Message"
+                      placeholder="Escreva sua mensagem aqui!"
                       className="bg-zinc-800 border-zinc-700 min-h-[150px]"
                       required
                     />
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-red-600 hover:bg-red-700"
+                    className="w-full bg-emerald-600 hover:bg-emerald-700"
                   >
-                    <Send className="mr-2 h-4 w-4" /> Send Message
+                    <Send className="mr-2 h-4 w-4" /> Enviar!
                   </Button>
                 </form>
               </CardContent>
@@ -93,53 +93,50 @@ const ContactSection = ({
           {/* Contact Information */}
           <div className="w-full flex flex-col justify-center space-y-8">
             <div className="flex items-start space-x-4">
-              <div className="bg-red-600 p-3 rounded-full">
+              <div className="bg-emerald-600 p-3 rounded-full">
                 <Phone className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Phone</h3>
+                <h3 className="text-xl font-semibold mb-2">Contato</h3>
                 <p className="text-gray-300">{contactInfo.phone}</p>
                 <p className="text-sm text-gray-400 mt-1">
-                  Available 24/7 for emergencies
+                  Horário comercial
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-red-600 p-3 rounded-full">
+              <div className="bg-emerald-600 p-3 rounded-full">
                 <Mail className="h-6 w-6" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
                 <p className="text-gray-300">{contactInfo.email}</p>
                 <p className="text-sm text-gray-400 mt-1">
-                  We'll respond within 24 hours
+                  Iremos responser o mais rápido possível!
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-red-600 p-3 rounded-full">
+              <div className="bg-emerald-600 p-3 rounded-full">
                 <MapPin className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Location</h3>
+                <h3 className="text-xl font-semibold mb-2">Endereço</h3>
                 <p className="text-gray-300">{contactInfo.address}</p>
                 <p className="text-sm text-gray-400 mt-1">
-                  Serving the entire metropolitan area
                 </p>
               </div>
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
+              <h3 className="text-xl font-semibold mb-4">Horário de serviço</h3>
               <div className="grid grid-cols-2 gap-2 text-gray-300">
-                <div>Monday - Friday:</div>
-                <div>8:00 AM - 8:00 PM</div>
-                <div>Saturday:</div>
-                <div>9:00 AM - 6:00 PM</div>
-                <div>Sunday:</div>
-                <div>Emergency Service Only</div>
+                <div>Segunda à Sexta</div>
+                <div>8:30 - 18:30 (não fecha ao meio-dia)</div>
+                <div>Sábado</div>
+                <div>8:30 - 12:30</div>
               </div>
             </div>
           </div>
