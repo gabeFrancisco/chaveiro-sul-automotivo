@@ -5,9 +5,6 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Logo from '../../public/logo.svg'
-import Bg from '../../public/bg.jpg';
-import Mb from '../../public/mb.jpg'
-import Scanner from '../../public/scanner.jpg'
 
 interface CarouselItem {
   id: number;
@@ -25,29 +22,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({
   carouselItems = [
-    {
-      id: 1,
-      image:
-        Mb.src,
-      alt: "Carro de luxo",
-      title: "Chaves inteligentes",
-      subtitle: "Para todos os tipos de veículos",
-    },
-    {
-      id: 2,
-      image:
-        Bg.src,
-      alt: "Modern car keys",
-      title: "Serviços de Chaveiro em Geral",
-      subtitle: "Diversos serviços de chaveiro para sua casa e seu negócio em qualquer lugar",
-    },
-    {
-      id: 3,
-      image: Scanner.src,
-      alt: "Emergency lockout service",
-      title: "Serviços e Reparos em veículos",
-      subtitle: "Reparo de fechaduras, alarmes e centrais eletrônicas",
-    },
+   
   ],
   autoRotateInterval = 5000,
 }: HeroSectionProps) => {
@@ -147,11 +122,6 @@ const HeroSection = ({
       </div>
 
       {/* Call to Action */}
-      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20">
-        <button className="bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-md text-lg font-bold transition-colors">
-          Emergency Assistance
-        </button>
-      </div>
     </section>
   );
 };

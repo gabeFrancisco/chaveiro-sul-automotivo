@@ -5,6 +5,10 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import EmergencyContact from "@/components/EmergencyContact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Bg from '../../public/bg.jpg';
+import Mb from '../../public/mb.jpg'
+import Scanner from '../../public/scanner.jpg'
+
 
 export default function Home() {
   return (
@@ -12,30 +16,29 @@ export default function Home() {
       {/* Hero Section with Carousel */}
       <HeroSection
         carouselItems={[
-          {
-            id: 1,
-            image:
-              "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80",
-            alt: "Luxury sports car",
-            title: "Professional Key Replacement",
-            subtitle: "For all luxury and standard vehicles",
-          },
-          {
-            id: 2,
-            image:
-              "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=1200&q=80",
-            alt: "Modern car keys",
-            title: "Advanced Key Programming",
-            subtitle: "State-of-the-art technology for modern vehicles",
-          },
-          {
-            id: 3,
-            image:
-              "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&q=80",
-            alt: "Emergency lockout service",
-            title: "24/7 Emergency Services",
-            subtitle: "We're there when you need us most",
-          },
+         {
+              id: 1,
+              image:
+                Mb.src,
+              alt: "Carro de luxo",
+              title: "Chaves inteligentes",
+              subtitle: "Para todos os tipos de veículos",
+            },
+            {
+              id: 2,
+              image:
+                Bg.src,
+              alt: "Modern car keys",
+              title: "Serviços de Chaveiro em Geral",
+              subtitle: "Diversos serviços de chaveiro para sua casa e seu negócio em qualquer lugar",
+            },
+            {
+              id: 3,
+              image: Scanner.src,
+              alt: "Emergency lockout service",
+              title: "Serviços e Reparos em veículos",
+              subtitle: "Reparo de fechaduras, alarmes e centrais eletrônicas",
+            },
         ]}
         autoRotateInterval={5000}
       />
