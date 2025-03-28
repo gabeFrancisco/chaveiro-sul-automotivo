@@ -5,10 +5,13 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import EmergencyContact from "@/components/EmergencyContact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+
 import Bg from '../../public/bg.jpg';
 import Mb from '../../public/mb.jpg'
 import Scanner from '../../public/scanner.jpg'
-
+import Hb from '../../public/hb.jpg'
+import Opening from '../../public/Opening.webp'
+import Alarm from '../../public/alarm.webp'
 
 export default function Home() {
   return (
@@ -45,32 +48,32 @@ export default function Home() {
 
       {/* Services Section */}
       <ServicesSection
-        title="Our Specialized Services"
-        subtitle="Professional automotive locksmith solutions for all your vehicle security needs"
+        title="Nós amamos oque fazemos!"
+        subtitle="Prestamos serviços automotivos com qualidade há mais de 20 anos!"
         services={[
           {
-            title: "Key Replacement",
+            title: "Cópia e confecção de chaves automotivas",
             description:
-              "Lost or damaged your car keys? We provide fast and reliable key cutting and replacement services for all vehicle makes and models.",
+              "Perdeu ou danificou sua chave? Nós resolvemos para você!.",
             icon: null, // Will use default Key icon
             imageUrl:
-              "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=800&q=80",
+              Hb.src,
           },
           {
-            title: "Emergency Lockout Assistance",
+            title: "Abertura de veículos",
             description:
-              "Locked out of your vehicle? Our 24/7 emergency service ensures you're never stranded for long with quick and damage-free entry solutions.",
+              "Abrimos seu carro da forma mais segura e moderna",
             icon: null, // Will use default Car icon
             imageUrl:
-              "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
+              Opening.src,
           },
           {
-            title: "Key Programming",
+            title: "Alarmes e Controles",
             description:
-              "We specialize in programming transponder keys, key fobs, and smart keys for modern vehicles with advanced security systems.",
+              "Fazemos cópias e reparos em alarmes automotivos e residenciais, bem como controles para portões eletrônicos",
             icon: null, // Will use default Smartphone icon
             imageUrl:
-              "https://images.unsplash.com/photo-1563391017873-9c658d045c95?w=800&q=80",
+              Alarm.src,
           },
         ]}
       />

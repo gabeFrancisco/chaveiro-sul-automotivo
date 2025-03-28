@@ -22,7 +22,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({
   carouselItems = [
-   
+
   ],
   autoRotateInterval = 5000,
 }: HeroSectionProps) => {
@@ -114,11 +114,12 @@ const HeroSection = ({
         <div>
           <Image src={Logo} width={1000} height={1000} className="w-2/6" alt="Logo Chaveiro Sul" />
         </div>
-        <div>
-          <ul>
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
+        <ul className="flex flex-row justify-center items-center">
+          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">Início</a></li>
+          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">História</a></li>
+          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">Serviços</a></li>
+          <li className="mx-2 hover:text-gray-400 transition-all"><a href="#">Contato</a></li>
+        </ul>
       </div>
 
       {/* Call to Action */}

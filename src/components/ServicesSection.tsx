@@ -36,7 +36,7 @@ const ServiceCard = ({
           {description}
         </CardDescription>
         <div className="flex items-center text-sm font-medium text-white hover:text-zinc-400 cursor-pointer transition-colors">
-          Learn more <ArrowRight className="ml-2 h-4 w-4" />
+          Saiba mais <ArrowRight className="ml-2 h-4 w-4" />
         </div>
       </CardContent>
     </Card>
