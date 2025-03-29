@@ -6,6 +6,9 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card, CardContent } from "./ui/card";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
+import GoogleMapReact from 'google-map-react';
+import Image from "next/image";
+import MarkerPoint from '../app/favicon.ico'
 
 interface ContactSectionProps {
   title?: string;
@@ -34,6 +37,18 @@ const ContactSection = ({
     );
   };
 
+  const defaultProps = {
+    center: {
+      lat: -30.017638085136873,
+      lng: -51.20840844673378,
+    },
+    zoom: 17
+  }
+
+  const Marker = ({ lat, lng }: { lat: number, lng: number }) => {
+    return <Image className="w-9" src={MarkerPoint} alt="Localização" />
+
+  }
   return (
     <section className="w-full py-20 bg-black text-white" id="contact">
       <div className="container mx-auto px-4">
@@ -141,6 +156,26 @@ const ContactSection = ({
             </div>
           </div>
         </div>
+      </div>
+      <div className="pt-5 rounded-lg w-screen h-screen">
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyAdEGfW9O423TZ0Qpegn30VshgpqZiFts8" }}
+          defaultCenter={defaultProps.center}
+          defaultZoom={defaultProps.zoom}
+          draggable={false}
+          options={{
+            draggable: false,
+            panControl: false,
+            fullscreenControl: false,
+            zoomControl: false,
+            scaleControl: false,
+            rotateControl: false,
+            disableDefaultUI: true,
+          }}
+          yesIWantToUseGoogleMapApiInternals
+        >
+          <Marker lat={-30.017500085136873} lng={-51.20850844673378} />
+        </GoogleMapReact>
       </div>
     </section>
   );
