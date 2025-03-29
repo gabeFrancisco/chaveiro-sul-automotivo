@@ -15,8 +15,7 @@ interface Testimonial {
   name: string;
   rating: number;
   text: string;
-  beforeImage?: string;
-  afterImage?: string;
+  image: string
 }
 
 interface TestimonialsSectionProps {
@@ -32,30 +31,24 @@ export default function TestimonialsSection({
       name: "Carlos Silva",
       rating: 5,
       text: "Chaveiro Sul saved me when I was locked out of my BMW at 2 AM. They arrived within 20 minutes and had me back in my car without any damage. Exceptional service!",
-      beforeImage:
+      image:
         "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&q=80",
-      afterImage:
-        "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80",
     },
     {
       id: 2,
       name: "Ana Ferreira",
       rating: 5,
       text: "I needed a replacement key for my Mercedes and Chaveiro Sul provided a perfect solution at half the dealer's price. The new key works flawlessly!",
-      beforeImage:
+      image:
         "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=500&q=80",
-      afterImage:
-        "https://images.unsplash.com/photo-1494905998402-395d579af36f?w=500&q=80",
     },
     {
       id: 3,
       name: "Roberto Mendes",
       rating: 4,
       text: "Professional key programming service for my Audi. They were knowledgeable, efficient, and much more affordable than the dealership.",
-      beforeImage:
+      image:
         "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500&q=80",
-      afterImage:
-        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500&q=80",
     },
   ],
   title = "What Our Clients Say",
@@ -114,34 +107,16 @@ export default function TestimonialsSection({
               <CarouselItem key={testimonial.id}>
                 <div className="flex flex-col md:flex-row gap-8 p-6 bg-zinc-900 rounded-xl">
                   {/* Before/After Images */}
-                  {(testimonial.beforeImage || testimonial.afterImage) && (
-                    <div className="flex-1 flex flex-col md:flex-row gap-4">
-                      {testimonial.beforeImage && (
-                        <div className="relative">
-                          <img
-                            src={testimonial.beforeImage}
-                            alt="Before"
-                            className="w-full h-48 object-cover rounded-lg"
-                          />
-                          <span className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                            Before
-                          </span>
-                        </div>
-                      )}
-                      {testimonial.afterImage && (
-                        <div className="relative">
-                          <img
-                            src={testimonial.afterImage}
-                            alt="After"
-                            className="w-full h-48 object-cover rounded-lg"
-                          />
-                          <span className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                            After
-                          </span>
-                        </div>
-                      )}
+                  <div className="flex-1 flex flex-col md:flex-row gap-4">
+
+                    <div className="relative">
+                      <img
+                        src={testimonial.image}
+                        className="w-full h-48 object-cover rounded-lg"
+                      />
                     </div>
-                  )}
+                  </div>
+
 
                   {/* Testimonial Content */}
                   <div className="flex-1 flex flex-col justify-between">

@@ -12,6 +12,7 @@ import Scanner from '../../public/scanner.jpg'
 import Hb from '../../public/hb.jpg'
 import Opening from '../../public/Opening.webp'
 import Alarm from '../../public/alarm.webp'
+import LogoSmall from '../../public/logo-small.png'
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
         ]}
         autoRotateInterval={5000}
       />
+
 
       {/* Services Section */}
       <ServicesSection
@@ -85,33 +87,27 @@ export default function Home() {
         testimonials={[
           {
             id: 1,
-            name: "Carlos Silva",
+            name: "Luciano S. Vargas",
             rating: 5,
-            text: "",
-            beforeImage:
-              "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&q=80",
-            afterImage:
-              "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80",
+            text: "São 6 anos fazendo cópias com eles e nunca precisei voltar para fazer qualquer ajuste, incrivelmente excelentes! Parabéns!",
+            image:
+              "https://lh3.googleusercontent.com/geougc-cs/AIHozJIMQ3Nf3RNbgofP_JSKbr4wRrEiBsaFG6ILF04pjxehCPNmLXjz_SbekN73Eljv0Wgnoc50uIZX6FJ_VXAigt7fn-vwLc0b95TzUPqnMk2qksWYvb897p2njcgbDxxIVN5kx_Q=s125-p-k",
           },
           {
             id: 2,
-            name: "Ana Ferreira",
+            name: "Lauren Caleffi",
             rating: 5,
-            text: "",
-            beforeImage:
-              "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=500&q=80",
-            afterImage:
-              "https://images.unsplash.com/photo-1494905998402-395d579af36f?w=500&q=80",
+            text: "Minhas experiências com a ChaveiroSul foram bem satisfatórias. O atendimento, o preço, o resultado na prestação de serviços são positivas. Virei cliente ! Obrigada ao Gabriel e ao Leonardo. 👍",
+            image:
+              LogoSmall.src,
           },
           {
             id: 3,
-            name: "Roberto Mendes",
-            rating: 4,
-            text: "",
-            beforeImage:
-              "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500&q=80",
-            afterImage:
-              "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500&q=80",
+            name: "João Pedro Silva",
+            rating: 5,
+            text: "Bom dia amigos ... Melhor chaveiro de Porto Alegre e não é mídia não hoje pela manhã ele me ajudou por telefone ☎️ só tenho a agradecer mesmo onesto de mais mesmo . Baaa nota 1.000 excelente serviço meus parabénsQue Deus te ilumine sempre parabéns... poucos que nem ele !!",
+            image:
+              LogoSmall.src,
           },
         ]}
       />
