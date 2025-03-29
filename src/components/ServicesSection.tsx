@@ -16,6 +16,8 @@ interface ServiceCardProps {
   imageUrl: string;
 }
 
+import Keys from '../../public/key.svg'
+
 const ServiceCard = ({
   title = "Service Title",
   description = "Detailed description of the service provided by Chaveiro Sul.",
@@ -81,7 +83,8 @@ const ServicesSection = ({
 }: ServicesSectionProps) => {
   return (
     <section className="w-full py-20 bg-black" id="services">
-      <div className="container mx-auto px-4">
+
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">{subtitle}</p>
